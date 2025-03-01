@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator EndDashCoroutine()
     {
-        float dashTime = 2f;
+        float dashTime = .2f;
         float dashCD = .25f;
         yield return new WaitForSeconds(dashTime);
         moveSpeed= startingMoveSpeed;
