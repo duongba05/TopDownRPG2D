@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private bool facingLeft = false;
+    public static PlayerController Instance;
     public bool FacingLeft { get {return facingLeft;} set { facingLeft = value; } }
     [SerializeField] private float moveSpeed = 4f;
 
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
     private void Awake()
     {
+        Instance = this;
         playerControls = new PlayerControls();
         rb= GetComponent<Rigidbody2D>(); 
         myAnimator = GetComponent<Animator>();
