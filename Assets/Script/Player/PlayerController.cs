@@ -3,11 +3,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
     private bool facingLeft = false;
     private bool isDashing = false;
-    public static PlayerController Instance;
+    
     public bool FacingLeft { get {return facingLeft;}}
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float dashSpeed = 4f;
@@ -19,9 +19,10 @@ public class PlayerController : MonoBehaviour
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
     private float startingMoveSpeed;
-    private void Awake()
+    
+    protected override void Awake()
     {
-        Instance = this;
+        base.Awake();
         playerControls = new PlayerControls();
         rb= GetComponent<Rigidbody2D>(); 
         myAnimator = GetComponent<Animator>();

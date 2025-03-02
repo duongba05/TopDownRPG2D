@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour
@@ -10,14 +12,16 @@ public class Parallax : MonoBehaviour
 
     private void Awake()
     {
-        cam= Camera.main;
+        cam = Camera.main;
     }
+
     private void Start()
     {
         startPos = transform.position;
     }
+
     private void FixedUpdate()
     {
-        transform.position = startPos+travel *parallaxOffset;
+        transform.position = startPos + travel * parallaxOffset;
     }
 }
