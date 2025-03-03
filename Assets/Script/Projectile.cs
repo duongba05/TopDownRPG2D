@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -6,26 +8,30 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject particleOnHitPrefabVFX;
 
     private Weaponinfo weaponInfo;
-    private Vector3 startPostition;
+    private Vector3 startPosition;
+
     private void Start()
     {
-        startPostition = transform.position;    
+        startPosition = transform.position;
     }
+
     private void Update()
     {
         MoveProjectile();
         DetectFireDistance();
     }
-    public void UpdateWeaponInfo(Weaponinfo weaponinfo)
+
+    public void UpdateWeaponInfo(Weaponinfo weaponInfo)
     {
-        this.weaponInfo = weaponinfo;
+        this.weaponInfo = weaponInfo;
     }
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>(); 
+        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructible indestructible = other.gameObject.GetComponent<Indestructible>();
 
-        if(!other.isTrigger && (enemyHealth || indestructible))
+        if (!other.isTrigger && (enemyHealth || indestructible))
         {
             enemyHealth?.TakeDamage(weaponInfo.weaponDamage);
             Instantiate(particleOnHitPrefabVFX, transform.position, transform.rotation);
@@ -35,7 +41,7 @@ public class Projectile : MonoBehaviour
 
     private void DetectFireDistance()
     {
-        if (Vector3.Distance(transform.position,startPostition) >weaponInfo.weaponRange)
+        if (Vector3.Distance(transform.position, startPosition) > weaponInfo.weaponRange)
         {
             Destroy(gameObject);
         }
