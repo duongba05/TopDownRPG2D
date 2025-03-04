@@ -11,12 +11,14 @@ public class Sword : MonoBehaviour, IWeapon
 
     private Transform weaponCollider;
     private Animator myAnimator;
+
     private GameObject slashAnim;
 
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
     }
+
     private void Start()
     {
         weaponCollider = PlayerController.Instance.GetWeaponCollider();
@@ -27,7 +29,8 @@ public class Sword : MonoBehaviour, IWeapon
     {
         MouseFollowWithOffset();
     }
-    public Weaponinfo GetWeaponinfo() 
+
+    public Weaponinfo GetWeaponinfo()
     {
         return weaponInfo;
     }

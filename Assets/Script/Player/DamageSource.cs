@@ -1,18 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageSource : MonoBehaviour
 {
-    [SerializeField] private int damageAmount = 1;
+    private int damageAmount;
 
     private void Start()
     {
-        MonoBehaviour currentActiveWeapon =ActiveWeapon.Instance.CurrentActiveWeapon;
-        damageAmount =(currentActiveWeapon as IWeapon).GetWeaponinfo().weaponDamage;
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
-        enemyHealth?.TakeDamage(damageAmount);
+        MonoBehaviour currenActiveWeapon = ActiveWeapon.Instance.CurrentActiveWeapon;
+        damageAmount = (currenActiveWeapon as IWeapon).GetWeaponinfo().weaponDamage;
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+        enemyHealth?.TakeDamage(damageAmount);
+    }
 }

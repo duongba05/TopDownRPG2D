@@ -1,38 +1,43 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIFade : Singleton<UIFade>
 {
-    [SerializeField] private Image fadedScreen;
+    [SerializeField] private Image fadeScreen;
     [SerializeField] private float fadeSpeed = 1f;
 
-    private IEnumerator fadeRountine;
+    private IEnumerator fadeRoutine;
 
     public void FadeToBlack()
     {
-        if(fadeRountine != null)
+        if (fadeRoutine != null)
         {
-            StopCoroutine(fadeRountine);    
+            StopCoroutine(fadeRoutine);
         }
-        fadeRountine = FadeRoutine(1);
-        StartCoroutine(fadeRountine);
+
+        fadeRoutine = FadeRoutine(1);
+        StartCoroutine(fadeRoutine);
     }
+
     public void FadeToClear()
     {
-        if (fadeRountine != null)
+        if (fadeRoutine != null)
         {
-            StopCoroutine(fadeRountine);
+            StopCoroutine(fadeRoutine);
         }
-        fadeRountine = FadeRoutine(0);
-        StartCoroutine(fadeRountine);
+
+        fadeRoutine = FadeRoutine(0);
+        StartCoroutine(fadeRoutine);
     }
+
     private IEnumerator FadeRoutine(float targetAlpha)
     {
-        while (!Mathf.Approximately(fadedScreen.color.a, targetAlpha))
+        while (!Mathf.Approximately(fadeScreen.color.a, targetAlpha))
         {
-            float alpha = Mathf.MoveTowards(fadedScreen.color.a, targetAlpha, fadeSpeed * Time.deltaTime);
-            fadedScreen.color = new Color(fadedScreen.color.r, fadedScreen.color.g, fadedScreen.color.b, alpha);
+            float alpha = Mathf.MoveTowards(fadeScreen.color.a, targetAlpha, fadeSpeed * Time.deltaTime);
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, alpha);
             yield return null;
         }
     }

@@ -8,12 +8,12 @@ public class EnemyPathfinding : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveDir;
-    private KnockBack knockback;
+    private Knockback knockback;
     private SpriteRenderer SpriteRenderer;
      
     private void Awake() {
         SpriteRenderer = GetComponent<SpriteRenderer>();
-        knockback = GetComponent<KnockBack>();
+        knockback = GetComponent<Knockback>();
         rb = GetComponent<Rigidbody2D>();
     }
 

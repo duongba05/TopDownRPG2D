@@ -1,6 +1,7 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 {
     private static T instance;
@@ -8,9 +9,9 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 
     protected virtual void Awake()
     {
-        if(instance != null && this.gameObject != null)
+        if (instance != null && this.gameObject != null)
         {
-            Destroy(this.gameObject);   
+            Destroy(this.gameObject);
         }
         else
         {

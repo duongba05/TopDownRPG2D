@@ -8,12 +8,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float knockBackThrust = 15f;
 
     private int currentHealth;
-    private KnockBack knockBack;
+    private Knockback knockBack;
     private Flash flash;
     private void Awake()
     {
         flash = GetComponent<Flash>();
-        knockBack = GetComponent<KnockBack>();
+        knockBack = GetComponent<Knockback>();
     }
     private void Start()
     {
