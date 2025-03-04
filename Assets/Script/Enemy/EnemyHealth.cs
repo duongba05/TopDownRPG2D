@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -8,34 +9,39 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float knockBackThrust = 15f;
 
     private int currentHealth;
-    private Knockback knockBack;
+    private Knockback knockback;
     private Flash flash;
+
     private void Awake()
     {
         flash = GetComponent<Flash>();
-        knockBack = GetComponent<Knockback>();
+        knockback = GetComponent<Knockback>();
     }
+
     private void Start()
     {
         currentHealth = startingHealth;
     }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        knockBack.GetKnockedBack(PlayerController.Instance.transform, knockBackThrust);
+        knockback.GetKnockedBack(PlayerController.Instance.transform, knockBackThrust);
         StartCoroutine(flash.FlashRoutine());
         StartCoroutine(CheckDetectDeathRoutine());
     }
-    IEnumerator CheckDetectDeathRoutine()
+
+    private IEnumerator CheckDetectDeathRoutine()
     {
         yield return new WaitForSeconds(flash.GetRestoreMatTime());
         DetectDeath();
     }
+
     public void DetectDeath()
     {
         if (currentHealth <= 0)
         {
-            Instantiate(deathVFXPrefab,transform.position,Quaternion.identity);    
+            Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
