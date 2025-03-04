@@ -168,7 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d92c04c55b5f4145bd093b50ec492fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
 --- !u!114 &7967623214295726504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e97dd2a8ec2eb40b03652d53b427df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserGrowTime: 2
 --- !u!114 &3901643970167731658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,3 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd6675de82dbad40a19d7a16b6a42df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeTime: 0.4
