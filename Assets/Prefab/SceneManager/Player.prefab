@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 6028165982034202546}
   - component: {fileID: 6536196620231203323}
   - component: {fileID: 3714428250615289484}
+  - component: {fileID: 4027935679534896324}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -376,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7532050211307340641}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.0049071456, w: 0.99998796}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0049043368, w: 0.999988}
   m_LocalPosition: {x: 1.3039256, y: -0.26998076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -597,3 +598,18 @@ MonoBehaviour:
   maxHealth: 3
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
+--- !u!114 &4027935679534896324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532050211307340641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4d834f4b4c31342ab35cf6248785a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullStaminaImage: {fileID: 0}
+  emptyStaminaImage: {fileID: 0}
+  timeBetweenStaminaRefresh: 3
