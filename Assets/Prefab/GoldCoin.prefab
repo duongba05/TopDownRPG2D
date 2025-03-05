@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4612930715277632526
+--- !u!1 &7475102598806809695
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2303681213707817191}
-  - component: {fileID: 2399530751478772850}
-  - component: {fileID: 625790962483700938}
-  - component: {fileID: 5887029710187525940}
-  - component: {fileID: 5995559226008941569}
-  - component: {fileID: 7967623214295726504}
-  - component: {fileID: 3901643970167731658}
+  - component: {fileID: 40701252690045829}
+  - component: {fileID: 6669043174976353524}
+  - component: {fileID: 8677661228055281314}
+  - component: {fileID: 1605937759687289611}
+  - component: {fileID: 5802834955191608377}
+  - component: {fileID: 8434392101291655185}
   m_Layer: 0
-  m_Name: Magic Laser
+  m_Name: GoldCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2303681213707817191
+--- !u!4 &40701252690045829
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612930715277632526}
+  m_GameObject: {fileID: 7475102598806809695}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.66, y: -3.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2399530751478772850
+--- !u!212 &6669043174976353524
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612930715277632526}
+  m_GameObject: {fileID: 7475102598806809695}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -60,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc61c1f6a51c74a4380d7640f508ed73, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,24 +80,46 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06550aa430ad008409d8ce0129ca2fef, type: 3}
+  m_Sprite: {fileID: -234688072440724827, guid: fa4c601fca8043a40979ae4edf2dd7f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
---- !u!70 &625790962483700938
+  m_SpriteSortPoint: 0
+--- !u!95 &8677661228055281314
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475102598806809695}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 420a37c2bd98f0145add6bb0418935ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &1605937759687289611
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612930715277632526}
+  m_GameObject: {fileID: 7475102598806809695}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -126,17 +147,17 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.49351647, y: 0.019631717}
-  m_Size: {x: 0.8409125, y: 0.40996814}
-  m_Direction: 1
---- !u!50 &5887029710187525940
+  m_Offset: {x: 0.0030848384, y: 0.0030848384}
+  m_Size: {x: 0.38302994, y: 0.41387844}
+  m_Direction: 0
+--- !u!50 &5802834955191608377
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612930715277632526}
+  m_GameObject: {fileID: 7475102598806809695}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -154,43 +175,20 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5995559226008941569
+--- !u!114 &8434392101291655185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612930715277632526}
+  m_GameObject: {fileID: 7475102598806809695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d92c04c55b5f4145bd093b50ec492fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 48677c1026cb35a4b8a4fc663dac6ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7967623214295726504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612930715277632526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8e97dd2a8ec2eb40b03652d53b427df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserGrowTime: 0.2
---- !u!114 &3901643970167731658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612930715277632526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd6675de82dbad40a19d7a16b6a42df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeTime: 0.4
+  pickUpDistance: 5
+  accelartionRate: 0.4
+  moveSpeed: 10
