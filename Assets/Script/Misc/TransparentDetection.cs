@@ -37,6 +37,15 @@ public class TransparentDetection : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            // Kiểm tra xem GameObject có bị inactive không
+            if (!gameObject.activeInHierarchy)
+            {
+                Debug.LogWarning($"⚠ GameObject '{gameObject.name}' đang bị inactive, không thể chạy Coroutine!");
+                return;
+            }
+
+            Debug.Log($"✅ GameObject '{gameObject.name}' vẫn active, bắt đầu Coroutine!");
+
             if (spriteRenderer)
             {
                 StartCoroutine(FadeRoutine(spriteRenderer, fadeTime, spriteRenderer.color.a, 1f));

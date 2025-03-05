@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1300117077758373512}
   - component: {fileID: 2953391678320852775}
   - component: {fileID: 2966470360943750672}
+  - component: {fileID: 2566285809733677499}
   m_Layer: 0
   m_Name: GhostVip
   m_TagString: Untagged
@@ -266,6 +267,8 @@ MonoBehaviour:
   startingDistance: 0.1
   timeBetweenBursts: 0.3
   restTime: 0.5
+  stagger: 0
+  oscillate: 0
 --- !u!210 &2966470360943750672
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -278,6 +281,21 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &2566285809733677499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2195269779594383817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1298f02923e705a43a00fb907456ea2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 7475102598806809695, guid: df3809d925c7cb64a823456b06017d16, type: 3}
+  healthGlobe: {fileID: 7475102598806809695, guid: 924277277f481e545b46fec72d042d4d, type: 3}
+  staminaGlobe: {fileID: 7475102598806809695, guid: f6903a60ba6b1614298d28bd7c317f83, type: 3}
 --- !u!1 &5225957581385550603
 GameObject:
   m_ObjectHideFlags: 0
