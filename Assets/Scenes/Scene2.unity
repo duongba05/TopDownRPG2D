@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 540516903}
   - component: {fileID: 540516905}
   m_Layer: 0
-  m_Name: Top
+  m_Name: SOS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
