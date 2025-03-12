@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private float roamChangeDirFloat = 2f;
-    [SerializeField] private float attackRange = 0f;
-    [SerializeField] private MonoBehaviour enemyType;
-    [SerializeField] private float attackCooldown = 2f;
+    [SerializeField] private float roamChangeDirFloat = 2f; // thoi gian doi huong 
+    [SerializeField] private float attackRange = 0f; // khoang cach tan cong
+    [SerializeField] private MonoBehaviour enemyType; 
+    [SerializeField] private float attackCooldown = 2f; // thoi gian cho tan cong
     [SerializeField] private bool stopMovingWhileAttacking = false;
 
     private bool canAttack = true;
