@@ -4,10 +4,10 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject prefabs;
-    private float spawnRange = 11f;
+    private float spawnRange = 7f;
     private int enemyCount = 0;
-    private int wave = 1;
-    private int maxWave = 10;
+    public int wave = 5;
+    public int maxWave = 8;
     void Start()
     {
         SpawnEnemyWave(wave);
@@ -17,7 +17,7 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         enemyCount = FindObjectsByType<EnemyAI>(FindObjectsSortMode.None).Length;
-        if(enemyCount == 0 && wave <maxWave)
+        if(enemyCount == 0 && wave < maxWave)
         {
             wave++;
             SpawnEnemyWave(wave);
