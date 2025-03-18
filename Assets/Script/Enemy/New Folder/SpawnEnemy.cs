@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI; // Thêm thư viện UI
+using UnityEngine.UI; 
 
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject prefabs;
-    public TextMeshProUGUI waveText; // Thêm biến Text UI
     private float spawnRange = 7f;
     private int enemyCount = 0;
-    public int wave = 5;  // Giữ nguyên số quái đầu tiên là 5
-    public int maxWave = 8;
-    private int displayWave = 1; // Hiển thị wave bắt đầu từ 1
+    public int maxWave = 5;
+    public int wave = 5;  
+    public TextMeshProUGUI waveText; 
+    private int displayWave = 1; 
 
-    void Start()
+    void Awake()
     {
+        StartCoroutine(ShowWaveText());
         UpdateWaveText();
         SpawnEnemyWave(wave);
     }
@@ -24,9 +25,9 @@ public class SpawnEnemy : MonoBehaviour
         enemyCount = FindObjectsByType<EnemyAI>(FindObjectsSortMode.None).Length;
         if (enemyCount == 0 && displayWave < maxWave)
         {
-            displayWave++; // Tăng wave hiển thị
-            wave++; // Tăng số quái thực tế
-            StartCoroutine(ShowWaveText()); // Hiển thị thông báo wave
+            displayWave++; 
+            wave++; 
+            StartCoroutine(ShowWaveText()); 
             SpawnEnemyWave(wave);
         }
     }
@@ -48,14 +49,14 @@ public class SpawnEnemy : MonoBehaviour
 
     private IEnumerator ShowWaveText()
     {
-        waveText.text = "Wave " + displayWave;
+        waveText.text = "Stage " + displayWave;
         waveText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2f); // Hiển thị 2 giây
+        yield return new WaitForSeconds(2f);
         waveText.gameObject.SetActive(false);
     }
 
     private void UpdateWaveText()
     {
-        waveText.text = "Wave " + displayWave;
+        waveText.text = "Stage " + displayWave;
     }
 }

@@ -9666,6 +9666,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af022185a8a1298478b6c9c296e0973f, type: 3}
+--- !u!114 &915373308 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7325571958666095505, guid: af022185a8a1298478b6c9c296e0973f, type: 3}
+  m_PrefabInstance: {fileID: 915373307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1079719901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34124,6 +34135,10 @@ PrefabInstance:
       propertyPath: prefabs
       value: 
       objectReference: {fileID: 3503372331829917096, guid: 12a23d1f377895448b55612c1217a077, type: 3}
+    - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
+      propertyPath: waveText
+      value: 
+      objectReference: {fileID: 915373308}
     - target: {fileID: 4947347356594228104, guid: 45860bf46946943408f45144b0ccee44, type: 3}
       propertyPath: m_Name
       value: SpawnEnemy
