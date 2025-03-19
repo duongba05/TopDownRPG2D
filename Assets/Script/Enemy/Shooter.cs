@@ -1,20 +1,20 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooter : MonoBehaviour, IEnemy
 {
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private float bulletMoveSpeed;
-    [SerializeField] private int burstCount;
-    [SerializeField] private int projectilesPerBurst;
-    [SerializeField][Range(0, 359)] private float angleSpread;
-    [SerializeField] private float startingDistance = 0.1f;
-    [SerializeField] private float timeBetweenBursts;
-    [SerializeField] private float restTime = 1f;
+    [SerializeField] private float bulletMoveSpeed; 
+    [SerializeField] private int burstCount; // số loạt bắn
+    [SerializeField] private int projectilesPerBurst; // số đạn trong loạt 
+    [SerializeField][Range(0, 359)] private float angleSpread; // góc bắn 
+    [SerializeField] private float startingDistance = 0.1f; //
+    [SerializeField] private float timeBetweenBursts; // thời gian giữa các đợt
+    [SerializeField] private float restTime = 1f; 
     [SerializeField] private bool stagger;
     [Tooltip("Stagger must be enabled for oscillate to function properly.")]
-    [SerializeField] private bool oscillate;
+    [SerializeField] private bool oscillate; // đạn zigzag
 
     private bool isShooting = false;
 
