@@ -23,6 +23,7 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         enemyCount = FindObjectsByType<EnemyAI>(FindObjectsSortMode.None).Length;
+        Debug.Log($"EnemyCount:{enemyCount}");
         if (enemyCount == 0 && displayWave < maxWave)
         {
             displayWave++; 
