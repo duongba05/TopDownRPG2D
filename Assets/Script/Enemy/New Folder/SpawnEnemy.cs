@@ -44,8 +44,8 @@ public class SpawnEnemy : MonoBehaviour
     private Vector3 EnemyPosSpawn()
     {
         float spawnPosX = Random.Range(-spawnRange, spawnRange);
-        float spawnPosZ = Random.Range(-spawnRange, spawnRange);
-        return new Vector3(spawnPosX, 0, spawnPosZ);
+        float spawnPosY = Random.Range(-spawnRange, spawnRange);
+        return new Vector3(spawnPosX, spawnPosY, 0);
     }
 
     private IEnumerator ShowWaveText()
