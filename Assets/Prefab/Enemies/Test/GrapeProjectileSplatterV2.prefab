@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1077492732593477742}
   - component: {fileID: 6935916892745167414}
   - component: {fileID: 6431512294930005749}
-  - component: {fileID: 2407992209038084990}
-  - component: {fileID: 1426621969336308836}
+  - component: {fileID: 878151076531336614}
   m_Layer: 0
   m_Name: GrapeProjectileSplatterV2
   m_TagString: Untagged
@@ -141,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 0.6
---- !u!114 &2407992209038084990
+--- !u!114 &878151076531336614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,19 +149,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1647579725048339602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff730933ce83a5b4fa476f7ef8032cc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c8df22954c6409489779e5188028ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1426621969336308836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647579725048339602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0cc21bca17f3db4794eb507539b23d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grapeProjectilePrefab: {fileID: 4231108102929437273, guid: 9430257f77e47c34f8c5dfb4c4a6c1c2, type: 3}

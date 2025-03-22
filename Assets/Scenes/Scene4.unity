@@ -49233,7 +49233,7 @@ PrefabInstance:
     - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
       propertyPath: prefabs
       value: 
-      objectReference: {fileID: 2195269779594383817, guid: 5d791db3cb4320140bc600e385644427, type: 3}
+      objectReference: {fileID: 1418973790661238562, guid: d4a1945d814294943aa90675ce0c9141, type: 3}
     - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
       propertyPath: waveText
       value: 

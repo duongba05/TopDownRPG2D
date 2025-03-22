@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,7 @@ public class GrapeProjectile1 : MonoBehaviour
 {
     [SerializeField] private float duration = 1f;
     [SerializeField] private AnimationCurve animCurve;
+    [SerializeField] private float heightY = 3f;
     [SerializeField] private GameObject grapeProjectileShadow;
     [SerializeField] private GameObject splatterPrefab;
 
@@ -27,7 +28,6 @@ public class GrapeProjectile1 : MonoBehaviour
 
         while (timePassed < duration)
         {
-            float heightY = Random.Range(3,5);
             timePassed += Time.deltaTime;
             float linearT = timePassed / duration;
             float heightT = animCurve.Evaluate(linearT);
