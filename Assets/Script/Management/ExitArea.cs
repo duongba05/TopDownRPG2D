@@ -16,13 +16,18 @@ public class ExitArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //if (other.gameObject.GetComponent<PlayerController>() && spawnEnemy.wave == spawnEnemy.maxWave )
-        if (other.gameObject.GetComponent<PlayerController>())
+        if (other.gameObject.GetComponent<PlayerController>() && spawnEnemy.wave == spawnEnemy.maxWave )
+        //if (other.gameObject.GetComponent<PlayerController>())
         {
             SceneManagement.Instance.SetTransitionName(sceneTransitionName);
             UIFade.Instance.FadeToBlack();
             StartCoroutine(LoadSceneRoutine());
+            if(SceneManager.GetActiveScene().name == "Scene6")
+            {
+                SceneManager.LoadScene(8);
+            }
         }
+        
     }
 
     private IEnumerator LoadSceneRoutine()
