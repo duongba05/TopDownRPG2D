@@ -43876,11 +43876,11 @@ PrefabInstance:
       objectReference: {fileID: 4424074329777732734}
     - target: {fileID: 6507334338477062965, guid: cf99cde4d4898f644a5c2f24e135f5d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.4634485
+      value: -15.395075
       objectReference: {fileID: 0}
     - target: {fileID: 6507334338477062965, guid: cf99cde4d4898f644a5c2f24e135f5d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1446295
+      value: -5.977579
       objectReference: {fileID: 0}
     - target: {fileID: 6858470049687040367, guid: cf99cde4d4898f644a5c2f24e135f5d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49283,6 +49283,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
+      propertyPath: maxWave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
       propertyPath: prefabs
       value: 
       objectReference: {fileID: 1418973790661238562, guid: b4e7dfc6e6463c1469b46be55a80cee6, type: 3}
@@ -49290,6 +49294,10 @@ PrefabInstance:
       propertyPath: waveText
       value: 
       objectReference: {fileID: 1345050308}
+    - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
+      propertyPath: bossPrefab
+      value: 
+      objectReference: {fileID: 1418973790661238562, guid: f4fe9fc0b65087b49916992770ba0372, type: 3}
     - target: {fileID: 4947347356594228104, guid: 45860bf46946943408f45144b0ccee44, type: 3}
       propertyPath: m_Name
       value: SpawnEnemy

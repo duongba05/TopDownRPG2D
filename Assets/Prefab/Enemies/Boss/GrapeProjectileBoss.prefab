@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1646096404263852720}
   - component: {fileID: 1393834272115874829}
   m_Layer: 0
-  m_Name: Grape Projectile
+  m_Name: GrapeProjectileBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.84, y: -1.65, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 2, y: 2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8366d21a687704992b4a76818468f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
+  duration: 1
   animCurve:
     serializedVersion: 2
     m_Curve:
@@ -192,4 +192,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   heightY: 5.5
   grapeProjectileShadow: {fileID: 1646407681895930657, guid: 60f7af7740bf0df4eba4ceaef3a63c89, type: 3}
-  splatterPrefab: {fileID: 1647579725048339602, guid: e8846ea310b263f48a5d208a810bb009, type: 3}
+  splatterPrefab: {fileID: 1647579725048339602, guid: b144c101e9368854fa6ec1dabbc7a864, type: 3}

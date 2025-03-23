@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 2966470360943750672}
   - component: {fileID: 2566285809733677499}
   m_Layer: 0
-  m_Name: GhostVip
+  m_Name: GhostVipBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.432, y: -1.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1210441023642764245}
@@ -67,7 +67,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: afbad043058d530418d37759bc073d09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a3dd4fb7bdf1241b5bc02f16221de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 4
 --- !u!114 &1966202456421535369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,13 +259,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7416e9daef7dc114290408471d2dbe79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8798178154545657563, guid: 95752f18d478894408309ff1ce935712, type: 3}
+  bulletPrefab: {fileID: 8798178154545657563, guid: 6dac4866284ea654cb95fcbeb3912cd9, type: 3}
   bulletMoveSpeed: 12
   burstCount: 5
   projectilesPerBurst: 8
   angleSpread: 156
   startingDistance: 0.1
-  timeBetweenBursts: 1
+  timeBetweenBursts: 4
   restTime: 0.5
   stagger: 0
   oscillate: 0

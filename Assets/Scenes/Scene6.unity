@@ -49681,6 +49681,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
+      propertyPath: maxWave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
       propertyPath: prefabs
       value: 
       objectReference: {fileID: 839572737263557999, guid: 7e8db6e579653004f9011441e9069b26, type: 3}
@@ -49688,6 +49692,10 @@ PrefabInstance:
       propertyPath: waveText
       value: 
       objectReference: {fileID: 1345050308}
+    - target: {fileID: 4185136550990091077, guid: 45860bf46946943408f45144b0ccee44, type: 3}
+      propertyPath: bossPrefab
+      value: 
+      objectReference: {fileID: 839572737263557999, guid: 0bc7280275d214546b928e704b7055fa, type: 3}
     - target: {fileID: 4947347356594228104, guid: 45860bf46946943408f45144b0ccee44, type: 3}
       propertyPath: m_Name
       value: SpawnEnemy
